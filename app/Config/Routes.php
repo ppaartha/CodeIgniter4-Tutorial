@@ -32,10 +32,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->add('product/(:any)/(:any)', 'Shop::product/$1/$2');
-$routes->add('blog',function (){
-    return '<h2>This is a blog</h2>';
 
-});
 $routes->group('admin',function($routes){{
     $routes->add('user','Admin\Users::index');
     $routes->add('users','Admin\Users::getAllUsers');
